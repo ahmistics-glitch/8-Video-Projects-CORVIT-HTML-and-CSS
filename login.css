@@ -1,0 +1,106 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #f2f2f2;
+}
+
+.wrapper {
+    width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.title {
+    line-height: 100px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+}
+
+form {
+    padding: 25px 30px;
+}
+
+.field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.field input:focus {
+    border-color: #4158d0;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    top: 0;
+    font-size: 14px;
+    color: #4158d0;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.field input[type="submit"] {
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.field input[type="submit"]:hover {
+    background: linear-gradient(-135deg, #b840b0, #3148c0);
+}
+
+.pass-link {
+    text-align: right;
+    margin: 10px 0 0 5px;
+}
+
+.pass-link a {
+    color: #4158d0;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.pass-link a:hover {
+    text-decoration: underline;
+}
